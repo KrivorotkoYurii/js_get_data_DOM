@@ -12,8 +12,10 @@ const totalPopulation = populationArr.reduce((acc, oneCountryPopulation) => {
 
 const averagePopulation = totalPopulation / populationArr.length;
 
+const userLanguage = navigator.language;
+
 document.querySelector('span.total-population').innerText =
-  totalPopulation.toLocaleString('en-US');
+  totalPopulation.toLocaleString(userLanguage);
 
 document.querySelector('span.average-population').innerText =
-  averagePopulation.toLocaleString('en-US');
+  averagePopulation.toLocaleString(userLanguage);
